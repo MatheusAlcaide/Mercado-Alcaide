@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produtos - Mercadinho Alcaide</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="produtos.css">
+
+    <!-- Ícones -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ========================================
+         MENU LATERAL
+    ========================================= -->
+    <aside class="menu-lateral">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div>
+                <span>Mercadinho</span>
+                <strong>ALCAIDE</strong>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="caixa.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Caixa
+            </a>
+
+            <a href="produtos.html" class="ativo">
+                <i class="fa-solid fa-box"></i>
+                Produtos
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Consultar Produto
+            </a>
+
+        </nav>
+
+
+        <div class="menu-inferior">
+
+            <a href="#">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Sair do Sistema
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL
+    ========================================= -->
+    <main class="principal">
+
+
+        <!-- TOPO -->
+        <header class="topo">
+
+            <div class="caixa-info">
+
+                <strong>Produtos</strong>
+
+                <span>Gerenciamento de produtos</span>
+
+            </div>
+
+
+            <div class="data">
+
+                <i class="fa-regular fa-clock"></i>
+
+                <span id="data-atual"></span>
+
+                <span>•</span>
+
+                <span id="hora-atual"></span>
+
+            </div>
+
+        </header>
+
+
+        <!-- ========================================
+             PRODUTOS
+        ========================================= -->
+        <section class="conteudo-produtos">
+
+
+            <!-- TÍTULO -->
+            <div class="titulo-produtos">
+
+                <div>
+
+                    <h1>Produtos</h1>
+
+                    <p>
+                        Cadastre e gerencie os produtos do mercado.
+                    </p>
+
+                </div>
+
+
+                <button class="novo-produto">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Novo Produto
+
+                </button>
+
+            </div>
+
+
+            <!-- ========================================
+                 LISTA DE PRODUTOS
+            ========================================= -->
+            <div class="area-lista-produtos">
+
+
+                <!-- BUSCA -->
+                <div class="barra-produtos">
+
+                    <div class="busca-produto">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="buscar-produto"
+                            placeholder="Buscar produto..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- TABELA -->
+                <div class="tabela-produtos">
+
+
+                    <!-- CABEÇALHO -->
+                    <div class="cabecalho-produtos">
+
+                        <span>Produto</span>
+
+                        <span>Código</span>
+
+                        <span>Preço</span>
+
+                        <span>Estoque</span>
+
+                        <span>Ações</span>
+
+                    </div>
+
+
+                    <!-- PRODUTO 1 -->
+                    <div class="linha-produto">
+
+                        <strong>
+                            Coca-Cola 2L
+                        </strong>
+
+                        <span>
+                            7894900011517
+                        </span>
+
+                        <span>
+                            R$ 12,00
+                        </span>
+
+                        <span>
+                            20
+                        </span>
+
+
+                        <div class="acoes-produto">
+
+                            <button class="editar-produto">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+
+                            <button class="excluir-produto">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUTO 2 -->
+                    <div class="linha-produto">
+
+                        <strong>
+                            Arroz 5kg
+                        </strong>
+
+                        <span>
+                            7891234567890
+                        </span>
+
+                        <span>
+                            R$ 25,00
+                        </span>
+
+                        <span>
+                            15
+                        </span>
+
+
+                        <div class="acoes-produto">
+
+                            <button class="editar-produto">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+
+                            <button class="excluir-produto">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================================
+                 MODAL NOVO PRODUTO
+            ========================================= -->
+            <div
+                class="modal-produto"
+                id="modal-produto"
+            >
+
+                <div class="modal-conteudo">
+
+
+                    <!-- TOPO DO MODAL -->
+                    <div class="modal-topo">
+
+                        <h2>
+                            Novo Produto
+                        </h2>
+
+
+                        <button class="fechar-modal">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- NOME -->
+                    <div class="campo-formulario">
+
+                        <label for="nome-produto">
+                            Nome do produto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome-produto"
+                        >
+
+                    </div>
+
+
+                    <!-- CÓDIGO -->
+                    <div class="campo-formulario">
+
+                        <label for="codigo-produto">
+                            Código de barras
+                        </label>
+
+                        <input
+                            type="text"
+                            id="codigo-produto"
+                        >
+
+                    </div>
+
+
+                    <!-- PREÇO -->
+                    <div class="campo-formulario">
+
+                        <label for="preco-produto">
+                            Preço
+                        </label>
+
+                        <input
+                            type="number"
+                            id="preco-produto"
+                            step="0.01"
+                        >
+
+                    </div>
+
+
+                    <!-- ESTOQUE -->
+                    <div class="campo-formulario">
+
+                        <label for="estoque-produto">
+                            Estoque
+                        </label>
+
+                        <input
+                            type="number"
+                            id="estoque-produto"
+                        >
+
+                    </div>
+
+
+                    <!-- SALVAR -->
+                    <button class="salvar-produto">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Salvar Produto
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ========================================
+             RODAPÉ
+        ========================================= -->
+        <footer class="rodape">
+
+            <div class="online">
+
+                <span class="bolinha"></span>
+
+                Sistema online
+
+            </div>
+
+
+            <div class="numero-caixa">
+
+                <i class="fa-solid fa-cash-register"></i>
+
+                Caixa 01
+
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+    <script src="./script.js"></script>
+    <script src="./script-produtos.js"></script>
+
+</body>
+
+</html>

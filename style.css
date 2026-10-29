@@ -1,0 +1,700 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --preto: #111820;
+    --preto-escuro: #080d12;
+
+    --grafite: #151e27;
+    --grafite-claro: #1b2631;
+
+    --dourado: #d6a62e;
+    --dourado-escuro: #c59829;
+
+    --fundo: #090f15;
+    --fundo-claro: #0f171f;
+
+    --cinza-texto: #9098a1;
+    --cinza-claro: #dfe2e5;
+    --cinza-borda: #29323b;
+
+    --verde: #20b45a;
+    --vermelho: #b82939;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #f2f3f4;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(214, 166, 46, 0.05),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0b1117,
+            #080d12
+        );
+}
+
+
+/* ========================================
+   MENU LATERAL
+======================================== */
+
+.menu-lateral {
+    width: 270px;
+    min-height: 100vh;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111820,
+            #080d12
+        );
+
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        8px 0 25px rgba(0, 0, 0, 0.15);
+
+    z-index: 10;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px 28px;
+
+    background:
+        rgba(7, 12, 17, 0.75);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+.logo > i {
+    font-size: 36px;
+
+    color: var(--dourado);
+
+    filter:
+        drop-shadow(
+            0 3px 8px
+            rgba(214, 166, 46, 0.15)
+        );
+}
+
+.logo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span {
+    color: #f0f1f2;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+.logo strong {
+    margin-top: 2px;
+
+    color: var(--dourado);
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu {
+    padding: 30px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.menu a,
+.menu-inferior a {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 15px 18px;
+
+    border:
+        1px solid transparent;
+
+    border-radius: 9px;
+
+    color: #b6bdc4;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.menu a i,
+.menu-inferior a i {
+    width: 25px;
+
+    color: #858e97;
+
+    font-size: 19px;
+
+    transition: 0.2s;
+}
+
+
+/* HOVER */
+
+.menu a:hover,
+.menu-inferior a:hover {
+    color: #ffffff;
+
+    border-color:
+        rgba(255, 255, 255, 0.06);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+}
+
+.menu a:hover i,
+.menu-inferior a:hover i {
+    color: var(--dourado);
+}
+
+
+/* ========================================
+   MENU ATIVO
+======================================== */
+
+.menu .ativo {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(214, 166, 46, 0.18),
+            rgba(214, 166, 46, 0.08)
+        );
+
+    border:
+        1px solid
+        rgba(214, 166, 46, 0.22);
+
+    color: #f2c55b;
+
+    font-weight: bold;
+}
+
+.menu .ativo i {
+    color: var(--dourado);
+}
+
+.menu .ativo::before {
+    content: "";
+
+    position: absolute;
+
+    left: -15px;
+
+    width: 4px;
+    height: 28px;
+
+    border-radius:
+        0 5px 5px 0;
+
+    background:
+        var(--dourado);
+}
+
+
+/* ========================================
+   MENU INFERIOR
+======================================== */
+
+.menu-inferior {
+    margin-top: auto;
+
+    padding: 20px 15px 30px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.principal {
+    width:
+        calc(100% - 270px);
+
+    min-height: 100vh;
+
+    margin-left: 270px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(214, 166, 46, 0.04),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0d141b,
+            #090f15
+        );
+}
+
+
+/* ========================================
+   TOPO
+======================================== */
+
+.topo {
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    background:
+        rgba(15, 23, 31, 0.93);
+
+    backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.16);
+}
+
+
+/* ========================================
+   CAIXA / FUNCIONÁRIO
+======================================== */
+
+.caixa-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-info strong {
+    color: #f3f4f5;
+
+    font-size: 21px;
+}
+
+.caixa-info span {
+    margin-top: 4px;
+
+    color: #858e97;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   DATA E HORA
+======================================== */
+
+.data {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #aeb5bc;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.data i {
+    color: var(--dourado);
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape {
+    height: 70px;
+
+    margin-top: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 45px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    background:
+        rgba(8, 13, 18, 0.78);
+
+    color: #848d96;
+}
+
+
+/* ========================================
+   SISTEMA ONLINE
+======================================== */
+
+.online {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #8e979f;
+
+    font-weight: bold;
+}
+
+.bolinha {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: var(--verde);
+
+    box-shadow:
+        0 0 10px
+        rgba(32, 180, 90, 0.50);
+}
+
+
+/* ========================================
+   NÚMERO DO CAIXA
+======================================== */
+
+.numero-caixa {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #9ba3ab;
+
+    font-weight: bold;
+}
+
+.numero-caixa i {
+    color: var(--dourado);
+
+    font-size: 19px;
+}
+
+
+/* ========================================
+   BOTÕES E LINKS
+======================================== */
+
+button,
+a {
+    -webkit-tap-highlight-color:
+        transparent;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ========================================
+   SELEÇÃO DE TEXTO
+======================================== */
+
+::selection {
+    background:
+        rgba(214, 166, 46, 0.35);
+
+    color: white;
+}
+
+
+/* ========================================
+   BARRA DE ROLAGEM
+======================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #303943;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d6a62e;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE GERAL
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .menu-lateral {
+        width: 220px;
+    }
+
+    .principal {
+        width:
+            calc(100% - 220px);
+
+        margin-left: 220px;
+    }
+
+    .logo {
+        padding:
+            20px 20px;
+    }
+
+    .logo span {
+        font-size: 15px;
+    }
+
+    .logo strong {
+        font-size: 21px;
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    .menu-lateral {
+        width: 75px;
+    }
+
+    .principal {
+        width:
+            calc(100% - 75px);
+
+        margin-left: 75px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        justify-content: center;
+
+        padding: 15px;
+    }
+
+    .logo div {
+        display: none;
+    }
+
+    .logo > i {
+        font-size: 29px;
+    }
+
+
+    /* MENU */
+
+    .menu {
+        padding:
+            30px 10px;
+    }
+
+    .menu a {
+        justify-content: center;
+
+        padding:
+            15px 10px;
+
+        font-size: 0;
+    }
+
+    .menu a i {
+        width: auto;
+
+        font-size: 21px;
+    }
+
+    .menu .ativo::before {
+        left: -10px;
+    }
+
+
+    /* MENU INFERIOR */
+
+    .menu-inferior {
+        padding:
+            20px 10px;
+    }
+
+    .menu-inferior a {
+        justify-content: center;
+
+        font-size: 0;
+    }
+
+    .menu-inferior a i {
+        width: auto;
+
+        font-size: 21px;
+    }
+
+
+    /* TOPO */
+
+    .topo {
+        padding:
+            0 25px;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape {
+        padding:
+            0 25px;
+    }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 550px) {
+
+    .topo {
+        height: 75px;
+
+        padding:
+            0 15px;
+    }
+
+    .caixa-info strong {
+        font-size: 17px;
+    }
+
+    .caixa-info span {
+        font-size: 12px;
+    }
+
+    .data {
+        padding: 8px;
+
+        gap: 6px;
+
+        font-size: 12px;
+    }
+
+    .data i {
+        font-size: 15px;
+    }
+
+    .rodape {
+        padding:
+            0 15px;
+
+        font-size: 12px;
+    }
+    #acesso-admin {
+    cursor: default;
+    user-select: none;
+}
+
+}

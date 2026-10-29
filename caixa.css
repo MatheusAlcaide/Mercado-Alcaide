@@ -1,0 +1,705 @@
+/* ========================================
+   TELA DO CAIXA
+======================================== */
+
+.conteudo-caixa {
+    flex: 1;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 35px 40px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 25px;
+}
+
+
+/* ========================================
+   ÁREA PRINCIPAL DA VENDA
+======================================== */
+
+.area-venda {
+    padding: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(20, 28, 36, 0.96),
+        rgba(11, 17, 23, 0.96)
+    );
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.titulo-caixa {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-caixa h1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: #f5f7f8;
+}
+
+.titulo-caixa p {
+    color: #9199a2;
+}
+
+.numero-venda {
+    padding: 10px 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid rgba(214, 166, 46, 0.32);
+    border-radius: 8px;
+
+    background: rgba(214, 166, 46, 0.10);
+    color: #d6a62e;
+}
+
+
+/* ========================================
+   CÓDIGO DE BARRAS
+======================================== */
+
+.leitor-produto {
+    margin-bottom: 30px;
+}
+
+.leitor-produto label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #e7e9eb;
+    font-weight: bold;
+}
+
+.campo-codigo {
+    display: flex;
+    gap: 12px;
+}
+
+.input-codigo {
+    flex: 1;
+    height: 55px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #303943;
+    border-radius: 9px;
+
+    background: #111922;
+
+    transition: 0.2s;
+}
+
+.input-codigo:focus-within {
+    border-color: #d6a62e;
+
+    box-shadow:
+        0 0 0 3px rgba(214, 166, 46, 0.12);
+}
+
+.input-codigo i {
+    margin-right: 15px;
+
+    color: #d6a62e;
+    font-size: 23px;
+}
+
+.input-codigo input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.input-codigo input::placeholder {
+    color: #707984;
+}
+
+.botao-adicionar {
+    padding: 0 25px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #e0b03a,
+        #c79320
+    );
+
+    color: #111820;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-adicionar:hover {
+    background: #e5b63e;
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 15px rgba(214, 166, 46, 0.18);
+}
+
+
+/* ========================================
+   LISTA DE PRODUTOS
+======================================== */
+
+.lista-venda {
+    width: 100%;
+    overflow-x: auto;
+
+    border: 1px solid #29323b;
+    border-radius: 10px;
+
+    background: #0f161d;
+}
+
+.produto-venda > span,
+.produto-venda > strong {
+    white-space: nowrap;
+}
+
+.cabecalho-lista,
+.produto-venda {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        90px
+        100px
+        120px
+        40px;
+
+    align-items: center;
+    gap: 8px;
+}
+
+.cabecalho-lista {
+    padding: 15px 20px;
+
+    background: #161f28;
+
+    color: #8f98a1;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    border-bottom: 1px solid #29323b;
+}
+
+.produto-venda {
+    padding: 17px 20px;
+
+    border-top: 1px solid #222c35;
+
+    color: #e8eaec;
+
+    transition: 0.2s;
+}
+
+.produto-venda:hover {
+    background: rgba(214, 166, 46, 0.035);
+}
+
+.nome-produto {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.nome-produto div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nome-produto strong {
+    color: #f4f5f6;
+}
+
+.nome-produto small {
+    color: #747d86;
+}
+
+.produto-icone {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: rgba(214, 166, 46, 0.12);
+
+    color: #d6a62e;
+
+    font-size: 20px;
+}
+
+
+/* ========================================
+   QUANTIDADE
+======================================== */
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantidade button {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #36404a;
+    border-radius: 6px;
+
+    background: #18212a;
+
+    color: #f1f2f3;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.quantidade button:hover {
+    border-color: #d6a62e;
+
+    background: rgba(214, 166, 46, 0.10);
+
+    color: #d6a62e;
+}
+
+.quantidade span {
+    min-width: 20px;
+
+    text-align: center;
+
+    color: #f6f6f6;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   REMOVER PRODUTO
+======================================== */
+
+.remover-produto {
+    width: 37px;
+    height: 37px;
+
+    border: 1px solid rgba(220, 53, 69, 0.18);
+    border-radius: 7px;
+
+    background: rgba(220, 53, 69, 0.08);
+
+    color: #e15b68;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.remover-produto:hover {
+    background: #b82939;
+
+    color: white;
+}
+
+
+/* ========================================
+   VENDA VAZIA
+======================================== */
+
+.venda-vazia {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    color: #767f89;
+}
+
+.venda-vazia i {
+    margin-bottom: 15px;
+
+    color: #39434d;
+
+    font-size: 55px;
+}
+
+.venda-vazia h3 {
+    margin-bottom: 8px;
+
+    color: #d6dadd;
+}
+
+
+/* ========================================
+   RESUMO DA VENDA
+======================================== */
+
+.resumo-venda {
+    padding: 27px;
+
+    align-self: start;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+
+    background: linear-gradient(
+        145deg,
+        #151e27,
+        #0d141b
+    );
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+.resumo-titulo {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.resumo-titulo i {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(214, 166, 46, 0.12);
+
+    color: #d6a62e;
+
+    font-size: 20px;
+}
+
+.resumo-titulo h2 {
+    color: #f1f3f4;
+
+    font-size: 20px;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+    color: #929aa3;
+}
+
+.linha-resumo strong {
+    color: #f0f1f2;
+}
+
+.divisor {
+    height: 1px;
+
+    margin: 23px 0;
+
+    background: #29323b;
+}
+
+.total-venda {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-venda span {
+    color: #f1f2f3;
+
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.total-venda strong {
+    color: #e1ad35;
+
+    font-size: 30px;
+}
+
+
+/* ========================================
+   FORMAS DE PAGAMENTO
+======================================== */
+
+.pagamento h3 {
+    margin-bottom: 13px;
+
+    color: #dfe2e5;
+
+    font-size: 15px;
+}
+
+.formas-pagamento {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.formas-pagamento button {
+    height: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid #303943;
+    border-radius: 8px;
+
+    background: #131c24;
+
+    color: #cfd3d6;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.formas-pagamento button i {
+    color: #9ca4ac;
+
+    font-size: 20px;
+}
+
+.formas-pagamento button:hover {
+    border-color: #d6a62e;
+
+    background: rgba(214, 166, 46, 0.08);
+
+    color: #f0c45c;
+}
+
+
+/* ========================================
+   BOTÕES FINAIS
+======================================== */
+
+.acoes-venda {
+    margin-top: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.cancelar-venda,
+.finalizar-venda {
+    width: 100%;
+    height: 53px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cancelar-venda {
+    border: 1px solid #39434c;
+
+    background: #151d25;
+
+    color: #e2636d;
+}
+
+.cancelar-venda:hover {
+    border-color: #b82939;
+
+    background: rgba(184, 41, 57, 0.10);
+}
+
+.finalizar-venda {
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #e0b03a,
+        #c79320
+    );
+
+    color: #111820;
+}
+
+.finalizar-venda:hover {
+    background: #e5b63e;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 16px rgba(214, 166, 46, 0.16);
+}
+
+
+/* ========================================
+   PAGAMENTO SELECIONADO
+======================================== */
+
+.formas-pagamento button.pagamento-selecionado {
+    background: #d6a62e !important;
+
+    border: 1px solid #e7be59 !important;
+
+    color: #111820 !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 14px rgba(214, 166, 46, 0.20);
+}
+
+.formas-pagamento button.pagamento-selecionado i {
+    color: #111820;
+}
+
+
+/* ========================================
+   CAIXA SEM PRODUTOS
+======================================== */
+
+.sem-produtos {
+    display: block;
+
+    width: 100%;
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    color: #747d86;
+
+    font-size: 15px;
+
+    background: transparent;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1200px) {
+
+    .conteudo-caixa {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+    }
+
+    .resumo-venda {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .cabecalho-lista {
+        display: none;
+    }
+
+    .produto-venda {
+        grid-template-columns: 1fr 100px;
+
+        gap: 15px;
+    }
+
+    .produto-venda > span,
+    .produto-venda > strong {
+        padding-left: 57px;
+    }
+
+    .remover-produto {
+        justify-self: end;
+    }
+
+    .campo-codigo {
+        flex-direction: column;
+    }
+
+    .botao-adicionar {
+        height: 50px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .conteudo-caixa {
+        padding: 15px;
+    }
+
+    .area-venda,
+    .resumo-venda {
+        padding: 20px;
+    }
+
+    .titulo-caixa {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .titulo-caixa h1 {
+        font-size: 24px;
+    }
+
+    .formas-pagamento {
+        grid-template-columns: 1fr;
+    }
+
+}

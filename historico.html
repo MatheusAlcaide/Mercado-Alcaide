@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Histórico - Mercadinho Alcaide</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="historico.css">
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div>
+                <span>Mercadinho</span>
+                <strong>ALCAIDE</strong>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="admin.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Administração
+            </a>
+
+            <a href="produtos.html">
+                <i class="fa-solid fa-box"></i>
+                Produtos
+            </a>
+
+            <a href="historico.html" class="ativo">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Histórico
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- PRINCIPAL -->
+
+    <main class="principal">
+
+        <header class="topo">
+
+            <div>
+                <strong>Painel Administrativo</strong>
+                <span>Histórico do mercado</span>
+            </div>
+
+
+            <div class="data">
+
+                <i class="fa-regular fa-clock"></i>
+
+                <span id="data-atual"></span>
+
+                <span>•</span>
+
+                <span id="hora-atual"></span>
+
+            </div>
+
+        </header>
+
+
+        <section class="conteudo-historico">
+
+
+            <!-- TÍTULO -->
+
+            <div class="titulo-historico">
+
+                <div>
+
+                    <span class="subtitulo">
+                        Controle financeiro e estoque
+                    </span>
+
+                    <h1>
+                        Histórico de Movimentações
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESUMO -->
+
+            <div class="resumo-historico">
+
+                <div class="card-historico">
+
+                    <span>
+                        Reposição
+                    </span>
+
+                    <strong id="total-reposicao">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <div class="card-historico">
+
+                    <span>
+                        Outras Despesas
+                    </span>
+
+                    <strong id="total-despesas">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <div class="card-historico">
+
+                    <span>
+                        Total de Gastos
+                    </span>
+
+                    <strong id="total-gastos">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filtros-historico">
+
+                <div class="campo-filtro">
+
+                    <label for="filtro-tipo">
+                        Tipo
+                    </label>
+
+                    <select id="filtro-tipo">
+
+                        <option value="todos">
+                            Todas as movimentações
+                        </option>
+
+                        <option value="entrada">
+                            Reposição de Mercadoria
+                        </option>
+
+                        <option value="saida">
+                            Despesas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo-filtro">
+
+                    <label for="pesquisa-historico">
+                        Pesquisar
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pesquisa-historico"
+                        placeholder="Produto, descrição ou categoria..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- TABELA -->
+
+            <div class="painel-historico">
+
+                <div class="cabecalho-historico">
+
+                    <span>Data</span>
+                    <span>Tipo</span>
+                    <span>Descrição</span>
+                    <span>Categoria</span>
+                    <span>Valor</span>
+
+                </div>
+
+
+                <div id="lista-historico">
+
+                    <!-- JavaScript -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="rodape">
+
+            <span>
+                <i class="fa-solid fa-circle"></i>
+                Sistema online
+            </span>
+
+            <span>
+                Administrador
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="script-historico.js"></script>
+
+</body>
+
+</html>

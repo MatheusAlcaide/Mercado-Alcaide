@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mercadinho Alcaide</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->~
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div>
+                <span>Mercadinho</span>
+                <strong id="acesso-admin">ALCAIDE</strong>
+            </div>
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="#" class="ativo">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="caixa.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Caixa
+            </a>
+
+            <a href="produtos.html">
+                <i class="fa-solid fa-box"></i>
+                Produtos
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Consultar Produto
+            </a>
+
+        </nav>
+
+
+        <div class="menu-inferior">
+
+            <a href="#">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Sair do Sistema
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- PARTE PRINCIPAL -->
+    <main class="principal">
+
+
+        <!-- TOPO -->
+        <header class="topo">
+
+            <div class="caixa-info">
+                <strong>Caixa 01</strong>
+                <span>Funcionário</span>
+            </div>
+
+
+           <div class="data">
+                <i class="fa-regular fa-clock"></i>
+
+                <span id="data-atual"></span>
+
+                <span>•</span>
+
+                <span id="hora-atual"></span>
+            </div>
+
+        </header>
+
+
+        <!-- CONTEÚDO -->
+        <section class="conteudo">
+
+
+            <div class="boas-vindas">
+
+                <p>Bem-vindo(a) ao</p>
+
+                <h1>Mercadinho Alcaide</h1>
+
+                <div class="linha">
+                    <span></span>
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <!-- NOVA VENDA -->
+            <div class="nova-venda">
+
+                <div class="icone-principal">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+
+                <div class="texto-venda">
+
+                    <h2>NOVA VENDA</h2>
+
+                    <p>
+                        Iniciar atendimento no caixa
+                        <br>
+                        e finalizar uma venda.
+                    </p>
+
+                </div>
+
+
+                <a href="caixa.html" class="botao-seta">
+                <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- ATALHOS -->
+            <div class="atalhos">
+
+
+                <div class="card">
+
+                    <div class="icone-card">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+
+                    <div class="card-texto">
+
+                        <h3>CONSULTAR PRODUTO</h3>
+
+                        <p>
+                            Pesquise um produto pelo nome
+                            ou código de barras e veja
+                            o preço de venda.
+                        </p>
+
+                    </div>
+
+
+                    <button class="seta-card">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone-card">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <div class="card-texto">
+
+                        <h3>PRODUTOS</h3>
+
+                        <p>
+                            Consulte os produtos
+                            cadastrados na loja.
+                        </p>
+
+                    </div>
+
+                    <a href="produtos.html" class="seta-card">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- MENSAGEM -->
+            <div class="sem-venda">
+
+                <div class="icone-sem-venda">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+
+                <h3>Nenhuma venda em andamento</h3>
+
+                <p>
+                    Clique em "Nova Venda" para iniciar.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+        <footer class="rodape">
+
+            <div class="online">
+                <span class="bolinha"></span>
+                Sistema online
+            </div>
+
+
+            <div class="numero-caixa">
+                <i class="fa-solid fa-cash-register"></i>
+                Caixa 01
+            </div>
+
+        </footer>
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

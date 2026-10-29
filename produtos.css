@@ -1,0 +1,522 @@
+/* ========================================
+   TELA DE PRODUTOS
+======================================== */
+
+.conteudo-produtos {
+    flex: 1;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: auto;
+
+    padding: 35px 40px;
+}
+
+
+/* ========================================
+   TOPO DA TELA
+======================================== */
+
+.titulo-produtos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+
+    background: linear-gradient(
+        145deg,
+        #151e27,
+        #0d141b
+    );
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.titulo-produtos h1 {
+    margin-bottom: 6px;
+
+    color: #f5f6f7;
+
+    font-size: 30px;
+}
+
+.titulo-produtos p {
+    color: #9098a1;
+}
+
+
+/* ========================================
+   BOTÃO NOVO PRODUTO
+======================================== */
+
+.novo-produto {
+    padding: 14px 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #e0b03a,
+        #c79320
+    );
+
+    color: #111820;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.novo-produto:hover {
+    background: #e5b63e;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(214, 166, 46, 0.18);
+}
+
+
+/* ========================================
+   LISTA DE PRODUTOS
+======================================== */
+
+.area-lista-produtos {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+
+    background: linear-gradient(
+        145deg,
+        #151e27,
+        #0d141b
+    );
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ========================================
+   BUSCA
+======================================== */
+
+.barra-produtos {
+    margin-bottom: 20px;
+}
+
+.busca-produto {
+    width: 100%;
+    max-width: 420px;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid #303943;
+    border-radius: 9px;
+
+    background: #111922;
+
+    transition: 0.2s;
+}
+
+.busca-produto:focus-within {
+    border-color: #d6a62e;
+
+    box-shadow:
+        0 0 0 3px rgba(214, 166, 46, 0.10);
+}
+
+.busca-produto i {
+    color: #d6a62e;
+}
+
+.busca-produto input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #f1f2f3;
+
+    font-size: 15px;
+}
+
+.busca-produto input::placeholder {
+    color: #747d86;
+}
+
+
+/* ========================================
+   TABELA
+======================================== */
+
+.tabela-produtos {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid #29323b;
+    border-radius: 10px;
+
+    background: #0f161d;
+}
+
+.cabecalho-produtos,
+.linha-produto {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        180px
+        120px
+        100px
+        110px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 20px;
+}
+
+.cabecalho-produtos {
+    background: #161f28;
+
+    color: #89929b;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    border-bottom: 1px solid #29323b;
+}
+
+.linha-produto {
+    border-top: 1px solid #222c35;
+
+    color: #d9dde0;
+
+    transition: 0.2s;
+}
+
+.linha-produto:first-of-type {
+    border-top: none;
+}
+
+.linha-produto strong {
+    color: #f1f3f4;
+}
+
+.linha-produto:hover {
+    background: rgba(214, 166, 46, 0.05);
+}
+
+
+/* ========================================
+   AÇÕES
+======================================== */
+
+.acoes-produto {
+    display: flex;
+
+    gap: 8px;
+}
+
+.acoes-produto button {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* EDITAR */
+
+.editar-produto {
+    border: 1px solid rgba(214, 166, 46, 0.35);
+
+    background: rgba(214, 166, 46, 0.10);
+
+    color: #d6a62e;
+}
+
+.editar-produto:hover {
+    border-color: #d6a62e;
+
+    background: rgba(214, 166, 46, 0.18);
+}
+
+
+/* EXCLUIR */
+
+.excluir-produto {
+    border: 1px solid rgba(220, 53, 69, 0.18);
+
+    background: rgba(220, 53, 69, 0.08);
+
+    color: #e15b68;
+}
+
+.excluir-produto:hover {
+    background: #b82939;
+
+    border-color: #b82939;
+
+    color: white;
+}
+
+
+/* ========================================
+   MODAL NOVO PRODUTO
+======================================== */
+
+.modal-produto {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 999;
+}
+
+.modal-produto.modal-aberto {
+    display: flex;
+}
+
+
+/* ========================================
+   CONTEÚDO DO MODAL
+======================================== */
+
+.modal-conteudo {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+
+    background: linear-gradient(
+        145deg,
+        #18222c,
+        #0d141b
+    );
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.50);
+}
+
+
+/* ========================================
+   TOPO DO MODAL
+======================================== */
+
+.modal-topo {
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-topo h2 {
+    color: #f3f4f5;
+
+    font-size: 24px;
+}
+
+
+/* BOTÃO X */
+
+.fechar-modal {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #303943;
+    border-radius: 7px;
+
+    background: #111922;
+
+    color: #aeb4ba;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.fechar-modal:hover {
+    border-color: #b82939;
+
+    background: rgba(184, 41, 57, 0.10);
+
+    color: #e15b68;
+}
+
+
+/* ========================================
+   CAMPOS DO FORMULÁRIO
+======================================== */
+
+.campo-formulario {
+    margin-bottom: 18px;
+}
+
+.campo-formulario label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #dfe2e5;
+
+    font-weight: bold;
+}
+
+.campo-formulario input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 13px;
+
+    border: 1px solid #303943;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #101820;
+
+    color: #f2f3f4;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.campo-formulario input::placeholder {
+    color: #707984;
+}
+
+.campo-formulario input:focus {
+    border-color: #d6a62e;
+
+    box-shadow:
+        0 0 0 3px rgba(214, 166, 46, 0.10);
+}
+
+
+/* ========================================
+   BOTÃO SALVAR
+======================================== */
+
+.salvar-produto {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #e0b03a,
+        #c79320
+    );
+
+    color: #111820;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.salvar-produto:hover {
+    background: #e5b63e;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px rgba(214, 166, 46, 0.18);
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .conteudo-produtos {
+        padding: 20px;
+    }
+
+    .titulo-produtos {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .novo-produto {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .area-lista-produtos {
+        padding: 18px;
+    }
+
+    .modal-conteudo {
+        padding: 22px;
+    }
+
+}

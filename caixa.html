@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caixa - Mercadinho Alcaide</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="caixa.css">
+    
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside class="menu-lateral">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div>
+                <span>Mercadinho</span>
+                <strong>ALCAIDE</strong>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="caixa.html" class="ativo">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Caixa
+            </a>
+
+            <a href="produtos.html">
+                <i class="fa-solid fa-box"></i>
+                Produtos
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Consultar Produto
+            </a>
+
+        </nav>
+
+
+        <div class="menu-inferior">
+
+            <a href="#">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Sair do Sistema
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- PARTE PRINCIPAL -->
+    <main class="principal">
+
+
+        <!-- TOPO -->
+        <header class="topo">
+
+            <div class="caixa-info">
+
+                <strong>Caixa 01</strong>
+
+                <span>Nova Venda</span>
+
+            </div>
+
+
+            <div class="data">
+                <i class="fa-regular fa-clock"></i>
+
+                <span id="data-atual"></span>
+
+                <span>•</span>
+
+                <span id="hora-atual"></span>
+            </div>
+        </header>
+
+
+        <!-- CONTEÚDO DO CAIXA -->
+        <section class="conteudo-caixa">
+
+
+            <!-- ESQUERDA -->
+            <div class="area-venda">
+
+
+                <div class="titulo-caixa">
+
+                    <div>
+
+                        <h1>Nova Venda</h1>
+
+                        <p>
+                            Adicione os produtos da compra
+                        </p>
+
+                    </div>
+
+
+                    <div class="numero-venda">
+
+                        Venda
+
+                        <strong>#0001</strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CÓDIGO DE BARRAS -->
+                <div class="leitor-produto">
+
+                    <label for="codigo">
+                        Código de barras
+                    </label>
+
+
+                    <div class="campo-codigo">
+
+                        <div class="input-codigo">
+
+                            <i class="fa-solid fa-barcode"></i>
+
+                            <input
+                                type="text"
+                                id="codigo"
+                                placeholder="Digite ou escaneie o código"
+                            >
+
+                        </div>
+
+
+                        <button class="botao-adicionar">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTOS DA VENDA -->
+                <div class="lista-venda">
+
+                    <div class="cabecalho-lista">
+                        <span>Produto</span>
+                        <span>Qtd.</span>
+                        <span>Preço</span>
+                        <span>Subtotal</span>
+                        <span></span>
+                    </div>
+
+                    <div class="sem-produtos">
+                    Nenhum produto adicionado
+                    </div>
+
+                </div>
+
+
+                
+
+            </div>
+
+
+            <!-- DIREITA -->
+            <aside class="resumo-venda">
+
+
+                <div class="resumo-titulo">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                    <h2>Resumo da Venda</h2>
+
+                </div>
+
+
+                <div class="linha-resumo">
+
+                    <span>Itens</span>
+
+                    <strong> 0 </strong>
+
+                </div>
+
+
+                <div class="linha-resumo">
+
+                    <span>Subtotal</span>
+
+                    <strong>R$0,00 </strong>
+
+                </div>
+
+
+                <div class="divisor"></div>
+
+
+                <div class="total-venda">
+
+                    <span>Total</span>
+
+                    <strong>R$</strong>
+
+                </div>
+
+
+                <!-- PAGAMENTO -->
+                <div class="pagamento">
+
+                    <h3>
+                        Forma de pagamento
+                    </h3>
+
+
+                    <div class="formas-pagamento">
+
+                        <button>
+
+                            <i class="fa-solid fa-money-bill-wave"></i>
+
+                            Dinheiro
+
+                        </button>
+
+
+                        <button>
+
+                            <i class="fa-brands fa-pix"></i>
+
+                            Pix
+
+                        </button>
+
+
+                        <button>
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            Cartão
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-venda">
+
+                    <button class="cancelar-venda">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                        Cancelar Venda
+
+                    </button>
+
+
+                    <button class="finalizar-venda">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Finalizar Venda
+
+                    </button>
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+        <footer class="rodape">
+
+            <div class="online">
+
+                <span class="bolinha"></span>
+
+                Sistema online
+
+            </div>
+
+
+            <div class="numero-caixa">
+
+                <i class="fa-solid fa-cash-register"></i>
+
+                Caixa 01
+
+            </div>
+
+        </footer>
+
+
+    </main>
+    <script src="script-caixa.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

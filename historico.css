@@ -1,0 +1,361 @@
+/* ========================================
+   HISTÓRICO
+======================================== */
+
+.conteudo-historico {
+    padding: 35px;
+    min-height: calc(100vh - 160px);
+}
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.titulo-historico {
+    margin-bottom: 30px;
+}
+
+
+.titulo-historico .subtitulo {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--cinza-texto);
+
+    font-size: 14px;
+}
+
+
+.titulo-historico h1 {
+    color: white;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   RESUMO
+======================================== */
+
+.resumo-historico {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.card-historico {
+    padding: 22px;
+
+    border: 1px solid var(--cinza-borda);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--grafite),
+            var(--preto)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.card-historico span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--cinza-texto);
+
+    font-size: 13px;
+}
+
+
+.card-historico strong {
+    color: white;
+
+    font-size: 25px;
+}
+
+
+/* ========================================
+   FILTROS
+======================================== */
+
+.filtros-historico {
+    display: grid;
+
+    grid-template-columns: 260px 1fr;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid var(--cinza-borda);
+
+    border-radius: 14px;
+
+    background: var(--grafite);
+}
+
+
+.campo-filtro {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.campo-filtro label {
+    color: var(--cinza-claro);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.campo-filtro input,
+.campo-filtro select {
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--cinza-borda);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: white;
+
+    background: var(--preto);
+
+    font-family: inherit;
+}
+
+
+.campo-filtro input:focus,
+.campo-filtro select:focus {
+    border-color: var(--dourado);
+}
+
+
+/* ========================================
+   PAINEL
+======================================== */
+
+.painel-historico {
+    overflow: hidden;
+
+    border: 1px solid var(--cinza-borda);
+
+    border-radius: 14px;
+
+    background: var(--grafite);
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.cabecalho-historico,
+.movimentacao-historico {
+    display: grid;
+
+    grid-template-columns:
+        130px
+        180px
+        minmax(200px, 1fr)
+        180px
+        140px;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+.cabecalho-historico {
+    padding: 16px 20px;
+
+    color: var(--cinza-texto);
+
+    background: var(--preto);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   MOVIMENTAÇÃO
+======================================== */
+
+.movimentacao-historico {
+    padding: 18px 20px;
+
+    border-top:
+        1px solid var(--cinza-borda);
+
+    color: var(--cinza-claro);
+
+    font-size: 14px;
+}
+
+
+.movimentacao-historico:hover {
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.data-movimentacao {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.data-movimentacao small {
+    color: var(--cinza-texto);
+}
+
+
+/* ========================================
+   TIPOS
+======================================== */
+
+.tipo-movimentacao {
+    width: fit-content;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.tipo-entrada {
+    color: #efc75e;
+
+    background:
+        rgba(214, 166, 46, 0.12);
+
+    border:
+        1px solid rgba(214, 166, 46, 0.35);
+}
+
+
+.tipo-saida {
+    color: #ff7583;
+
+    background:
+        rgba(184, 41, 57, 0.12);
+
+    border:
+        1px solid rgba(184, 41, 57, 0.35);
+}
+
+
+/* ========================================
+   VALORES
+======================================== */
+
+.valor-negativo {
+    color: #ff7583;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   SEM MOVIMENTAÇÕES
+======================================== */
+
+.sem-movimentacoes {
+    padding: 55px 20px;
+
+    text-align: center;
+
+    color: var(--cinza-texto);
+}
+
+
+.sem-movimentacoes i {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--dourado);
+
+    font-size: 32px;
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .resumo-historico {
+        grid-template-columns: 1fr;
+    }
+
+
+    .painel-historico {
+        overflow-x: auto;
+    }
+
+
+    .cabecalho-historico,
+    .movimentacao-historico {
+        min-width: 900px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .conteudo-historico {
+        padding: 20px;
+    }
+
+
+    .filtros-historico {
+        grid-template-columns: 1fr;
+    }
+
+
+    .titulo-historico h1 {
+        font-size: 26px;
+    }
+
+}

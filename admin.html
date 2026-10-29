@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Administração - Mercadinho Alcaide</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- MENU LATERAL -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div>
+
+                <span>Mercadinho</span>
+
+                <strong>ALCAIDE</strong>
+
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home
+
+            </a>
+
+
+            <a href="admin.html" class="ativo">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Administração
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-boxes-stacked"></i>
+
+                Estoque
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-money-bill-transfer"></i>
+
+                Movimentações
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Histórico
+
+            </a>
+
+        </nav>
+
+
+        <div class="menu-inferior">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Voltar ao Sistema
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="principal">
+
+
+        <!-- TOPO -->
+
+        <header class="topo">
+
+            <div class="caixa-info">
+
+                <strong>Painel Administrativo</strong>
+
+                <span>Controle completo do mercado</span>
+
+            </div>
+
+
+            <div class="data">
+
+                <i class="fa-regular fa-clock"></i>
+
+                <span id="data-atual"></span>
+
+                <span>•</span>
+
+                <span id="hora-atual"></span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ÁREA ADMIN -->
+
+        <section class="conteudo-admin">
+
+
+            <div class="titulo-admin">
+
+                <div>
+
+                    <p class="subtitulo">
+                        Visão geral do mercado
+                    </p>
+
+                    <h1>Administração</h1>
+
+                </div>
+
+
+                <div class="admin-status">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Área Privada
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARDS -->
+
+            <div class="cards-resumo">
+
+
+                <div class="card-resumo">
+
+                    <div class="icone-resumo vendas">
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Vendas de Hoje</span>
+
+                        <h2 id="vendas-hoje">0</h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="card-resumo">
+
+                    <div class="icone-resumo faturamento">
+
+                        <i class="fa-solid fa-dollar-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Faturamento</span>
+
+                        <h2 id="faturamento-hoje">
+                            R$ 0,00
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="card-resumo">
+
+                    <div class="icone-resumo produtos">
+
+                        <i class="fa-solid fa-box"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Itens Vendidos</span>
+
+                        <h2 id="itens-vendidos">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="card-resumo">
+
+                    <div class="icone-resumo estoque">
+
+                        <i class="fa-solid fa-warehouse"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Produtos em Estoque</span>
+
+                        <h2 id="estoque-total">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- AÇÕES -->
+
+            <div class="acoes-admin">
+
+                <button class="entrada-mercadoria">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Entrada de Mercadoria
+
+                </button>
+
+
+                <button class="saida-admin">
+
+                    <i class="fa-solid fa-arrow-up-right-dots"></i>
+
+                    Registrar Saída
+
+                </button>
+
+
+                <a href="historico.html" class="ver-historico">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Histórico
+                </a>
+
+            </div>
+
+
+
+            <!-- ÚLTIMAS VENDAS -->
+
+            <div class="painel-vendas">
+
+
+                <div class="painel-topo">
+
+                    <div>
+
+                        <h2>Últimas Vendas</h2>
+
+                        <p>
+                            Vendas registradas no sistema
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+
+                <div class="tabela-vendas">
+
+
+                    <div class="cabecalho-vendas">
+
+                        <span>Horário</span>
+
+                        <span>Pagamento</span>
+
+                        <span>Itens</span>
+
+                        <span>Total</span>
+
+                    </div>
+
+
+                    <div
+                        id="lista-ultimas-vendas"
+                    >
+
+                        <!-- JAVASCRIPT -->
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="rodape">
+
+            <div class="online">
+
+                <span class="bolinha"></span>
+
+                Sistema online
+
+            </div>
+
+
+            <div class="numero-caixa">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                Administrador
+
+            </div>
+
+        </footer>
+
+
+    </main>
+    <!-- MODAL ENTRADA DE MERCADORIA -->
+
+<div class="modal-admin" id="modal-entrada">
+
+    <div class="modal-admin-conteudo">
+
+        <div class="modal-admin-topo">
+
+            <div>
+                <span class="modal-subtitulo">Movimentação de estoque</span>
+                <h2>Entrada de Mercadoria</h2>
+            </div>
+
+            <button
+                type="button"
+                class="fechar-modal-admin"
+                id="fechar-entrada"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="campo-admin">
+
+            <label for="produto-entrada">
+                Produto
+            </label>
+
+            <select id="produto-entrada">
+
+                <option value="">
+                    Selecione um produto
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="linha-campos-admin">
+
+            <div class="campo-admin">
+
+                <label for="quantidade-entrada">
+                    Quantidade
+                </label>
+
+                <input
+                    type="number"
+                    id="quantidade-entrada"
+                    min="1"
+                    placeholder="Ex: 10"
+                >
+
+            </div>
+
+
+            <div class="campo-admin">
+
+                <label for="valor-entrada">
+                    Valor gasto
+                </label>
+
+                <input
+                    type="number"
+                    id="valor-entrada"
+                    min="0"
+                    step="0.01"
+                    placeholder="Ex: 150,00"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="estoque-atual-admin">
+
+            <span>Estoque atual</span>
+
+            <strong id="estoque-atual-entrada">
+                -
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="confirmar-entrada"
+            id="confirmar-entrada"
+        >
+
+            <i class="fa-solid fa-check"></i>
+
+            Confirmar Entrada
+
+        </button>
+
+    </div>
+
+</div>
+<!-- MODAL REGISTRAR SAÍDA -->
+
+<div class="modal-admin" id="modal-saida">
+
+    <div class="modal-admin-conteudo">
+
+        <div class="modal-admin-topo">
+
+            <div>
+                <span class="modal-subtitulo">
+                    Movimentação financeira
+                </span>
+
+                <h2>Registrar Saída</h2>
+            </div>
+
+            <button
+                type="button"
+                class="fechar-modal-admin"
+                id="fechar-saida"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="campo-admin">
+
+            <label for="descricao-saida">
+                Descrição
+            </label>
+
+            <input
+                type="text"
+                id="descricao-saida"
+                placeholder="Ex: Conta de energia"
+            >
+
+        </div>
+
+
+        <div class="campo-admin">
+
+            <label for="categoria-saida">
+                Categoria
+            </label>
+
+            <select id="categoria-saida">
+
+                <option value="">
+                    Selecione uma categoria
+                </option>
+
+                <option value="Energia">
+                    Energia
+                </option>
+
+                <option value="Água">
+                    Água
+                </option>
+
+                <option value="Manutenção">
+                    Manutenção
+                </option>
+
+                <option value="Limpeza">
+                    Limpeza
+                </option>
+
+                <option value="Transporte">
+                    Transporte
+                </option>
+
+                <option value="Outros">
+                    Outros
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="campo-admin">
+
+            <label for="valor-saida">
+                Valor da despesa
+            </label>
+
+            <input
+                type="number"
+                id="valor-saida"
+                min="0.01"
+                step="0.01"
+                placeholder="Ex: 250,00"
+            >
+
+        </div>
+
+
+        <button
+            type="button"
+            class="confirmar-saida"
+            id="confirmar-saida"
+        >
+
+            <i class="fa-solid fa-check"></i>
+
+            Registrar Saída
+
+        </button>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+    <script src="script-admin.js"></script>
+
+</body>
+
+</html>
