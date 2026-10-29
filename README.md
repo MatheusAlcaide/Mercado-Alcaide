@@ -1,1 +1,3 @@
-# Mercado-Alcaide
+**Mercado-Alcaide**
+
+O PDV Mercadinho Alcaide é um sistema web para a rotina de um pequeno mercado, do atendimento no caixa à gestão do estoque. No caixa, o operador lê ou digita o código de barras, ajusta as quantidades e finaliza a venda em dinheiro, Pix ou cartão, com validação de estoque em tempo real. O cadastro de produtos permite criar, editar, excluir e buscar itens. A área administrativa, protegida por senha, mostra as vendas e o faturamento do dia, os itens vendidos e o estoque total. Nela é possível registrar entradas de mercadoria e despesas por categoria, e tudo fica no histórico de movimentações, com filtros e totais de gastos. O visual é escuro com detalhes em dourado e se adapta a telas menores. Os dados ficam salvos no navegador (localStorage), sem precisar de servidor.
